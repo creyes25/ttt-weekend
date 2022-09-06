@@ -10,6 +10,7 @@ const winningCombos = [
   [2, 4, 6]
 ]
 
+const kazoo = new Audio('../audio/kazoo.wav')
 
 /*---------------------------- Variables (state) ----------------------------*/
 
@@ -72,10 +73,17 @@ function render(){
   }else {
     if(winner === 1){
       messageEl.textContent = `Congratulations player X, you won!`
-      // messageEl.style.color = 'lightgreen'
+      confetti.start(1000)
+      setTimeout(function(){
+        kazoo.play()
+      },1000)
     }else {
       messageEl.textContent = `Congratulations player O, you won!`
-
+      confetti.start(1000)
+      setTimeout(function(){
+        kazoo.play()
+      },1000)
+      
     }
   }
 }
