@@ -21,13 +21,18 @@ section.board {
   grid-template-columns: repeat(3, 10vmin);
   grid-gap: 0vmin;
   margin: 5px auto;
+  padding: 10PX;
 }
 
 div {
-  border: 3px solid black;
+  border: 2px solid black;
   font-size: 8vmin;
   text-align: center;
   vertical-align: middle;
+}
+
+.squares {
+  padding: 0px;
 }
 
 button {
